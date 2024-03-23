@@ -1,0 +1,40 @@
+@use "../abstract" as *;
+
+.input-field {
+  position: relative;
+  .input {
+    color: $secondary;
+    padding: 16px 20px;
+    border: 1px solid $neutral2;
+    @include paragraph-16(600);
+    width: 100%;
+    &-with-icon {
+      padding-right: 45px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  ::placeholder {
+    color: $neutral4;
+  }
+
+  .icon {
+    position: absolute;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+.textarea-field {
+  padding: 16px 20px;
+  border: 1px solid $neutral2;
+  @include paragraph-16(600);
+  color: $neutral4;
+  width: 100%;
+  resize: none;
+  &:focus {
+    outline: none;
+  }
+}

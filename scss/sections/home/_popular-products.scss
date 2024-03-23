@@ -1,0 +1,46 @@
+@use '../../abstract' as *;
+.popular-products {
+  padding: 60px 0;
+  background-color: $secondary;
+  @include tablet {
+    padding: 80px 0;
+  }
+  @include desktop {
+    padding: 100px 0;
+  }
+  @include extra-large-desktop {
+    padding: 130px 0;
+  }
+  .section-title-block {
+    .section-title {
+      color: $white;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      max-width: 80%;
+      color: $neutral2;
+      margin: 0 auto;
+      @include desktop {
+        max-width: 794px;
+      }
+    }
+  }
+
+  .popular-products-block {
+    margin-bottom: 60px;
+    a {
+      display: block;
+    }
+    .btn-cart:hover {
+      background-color: $white;
+    }
+  }
+  .product-card:hover .btn-cart {
+    background-color: $white;
+  }
+  .btn-primary {
+    --bs-btn-hover-bg: #{$primary};
+    --bs-btn-hover-color: #{$secondary};
+  }
+}

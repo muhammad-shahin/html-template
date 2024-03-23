@@ -1,0 +1,24 @@
+@use "../../abstract" as *;
+
+.info-card {
+  background-color: $secondary;
+  padding: 30px 25px;
+  @include tablet {
+    padding: 50px 40px;
+  }
+  @include desktop {
+    padding: 60px 52px;
+  }
+  @include extra-large-desktop {
+    padding: 72px 62px;
+  }
+  &__title {
+    @include heading-32(700);
+    color: $white;
+    margin-bottom: 24px;
+  }
+  p {
+    @include paragraph-18();
+    color: $neutral2;
+  }
+}

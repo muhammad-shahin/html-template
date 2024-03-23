@@ -1,0 +1,86 @@
+@use '../abstract' as *;
+.btn {
+  border: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  --bs-btn-border-radius: 0;
+  --bs-btn-padding-x: 32px;
+  --bs-btn-padding-y: 16px;
+  @include paragraph-18(700);
+  &-primary {
+    background-color: $primary;
+    padding: 10px 18px;
+    color: $secondary;
+    --bs-btn-hover-bg: #{$secondary};
+    --bs-btn-active-bg: #{$secondary};
+    @include tablet {
+      padding: 16px 32px;
+    }
+  }
+  &-secondary {
+    background-color: $secondary;
+    padding: 10px 18px;
+    color: $white;
+    --bs-btn-hover-bg: #{$secondary};
+    --bs-btn-active-bg: #{$secondary};
+    @include tablet {
+      padding: 16px 32px;
+    }
+  }
+  &-neutral2 {
+    background-color: $neutral2;
+    padding: 10px 18px;
+    @include tablet {
+      padding: 12px 24px;
+    }
+  }
+  &-cart {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --bs-btn-padding-x: 0px;
+    --bs-btn-padding-y: 0px;
+  }
+  &-border {
+    width: fit-content;
+    background-color: transparent;
+    border: 2px solid $secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s linear;
+    padding: 10px 18px;
+    color: $secondary;
+    --bs-btn-hover-border-color: $secondary;
+    @include tablet {
+      padding: 12px 28px;
+    }
+    // &:hover {
+    //   background-color: $secondary;
+    //   transition: all 0.3s linear;
+    //   color: $white;
+    // }
+  }
+  &-arrow {
+    width: fit-content;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: $secondary;
+  }
+}
+
+.hvr-black {
+  --bs-btn-hover-color: $secondary;
+  --bs-btn-active-color: $secondary;
+  --bs-btn-hover-bg: #{$white};
+  --bs-btn-active-bg: #{$white};
+}

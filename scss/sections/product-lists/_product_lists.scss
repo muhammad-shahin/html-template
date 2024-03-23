@@ -1,0 +1,279 @@
+@use '../../abstract' as *;
+.header-section {
+  p {
+    max-width: 80%;
+    margin: 0 auto;
+    @include tablet {
+      max-width: 549px;
+    }
+  }
+}
+.product-lists-and-sidebar {
+  margin-top: 80px;
+  margin-bottom: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @include desktop {
+    flex-direction: row;
+  }
+}
+// sidebar styles
+.product-lists__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  @include desktop {
+    width: 35%;
+  }
+  .sidebar-label {
+    @include heading-20(700);
+    color: $secondary;
+    margin-bottom: 24px;
+  }
+  // categories styles
+  .categories-block {
+    .categories-wrapper {
+      .category-card {
+        // width: 130px;
+        height: 90px;
+        background-color: $neutral1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @include tablet {
+          height: 118px;
+          gap: 16px;
+        }
+        .category-title {
+          @include heading-20(700);
+          color: $secondary;
+        }
+        &.active,
+        &:hover {
+          background-color: $primary;
+          transition: all 0.2s linear;
+          img {
+            filter: brightness(40%);
+          }
+        }
+      }
+    }
+  }
+
+  // price range styles
+  .price-range-block {
+    padding: 14px;
+    border: 1px solid $neutral2;
+    @include tablet {
+      border: 2px solid $neutral2;
+      padding: 32px;
+    }
+    .from-to-block {
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      .from-to-label,
+      .dollar-icon {
+        @include button-18(700);
+        color: $neutral8;
+      }
+      .price-field {
+        @include button-18(700);
+        margin: 0 8px;
+        padding: 8px 10px;
+        outline: none;
+        border: 2px solid $neutral2;
+        color: $neutral2;
+        width: 60px;
+        height: 35px;
+        @include tablet {
+          padding: 16px 12px;
+          width: 79px;
+          height: 52px;
+        }
+      }
+    }
+  }
+
+  // availability styles
+  .availability-block {
+    padding: 14px;
+    border: 1px solid $neutral2;
+    @include tablet {
+      border: 2px solid $neutral2;
+      padding: 32px;
+    }
+    .checkbox-items {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .checkbox-wrapper {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 8px;
+      label {
+        color: $neutral8;
+        font-size: 18px;
+      }
+    }
+  }
+}
+// product list and filter bar
+.product-lists__block {
+  width: 100%;
+  @include desktop {
+    width: 65%;
+  }
+  .filter-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0px;
+    }
+    .showing-result-label,
+    .sort-by-label {
+      @include paragraph-18(normal);
+      color: $neutral8;
+    }
+    .sort-by-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      .select-sort-by {
+        @include paragraph-18(normal);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: $secondary;
+      }
+    }
+  }
+  .horizontal-bar {
+    border-bottom-color: $neutral2;
+    margin-top: 24px;
+  }
+
+  // products & card styles
+  .products-container {
+    margin-top: 40px;
+    // .product-card {
+    //   position: relative;
+    //   display: block;
+    //   padding: 32px 42px;
+    //   background-color: $neutral1;
+    //   height: 330px;
+    //   cursor: pointer;
+    //   @include large-desktop {
+    //     padding: 20px 32px;
+    //   }
+    //   @include extra-large-desktop {
+    //     padding: 32px 42px;
+    //   }
+    //   .product-card__img {
+    //     width: fit-content;
+    //     margin: 0 auto;
+    //     img {
+    //       object-fit: contain;
+    //       width: 100%;
+    //       height: 100%;
+    //     }
+    //   }
+    //   .product-card__body {
+    //     .product-card__title,
+    //     .product-card__price {
+    //       @include heading-20(700);
+    //       color: $secondary;
+    //       text-align: center;
+    //     }
+    //     .product-card__title {
+    //       margin-top: 32px;
+    //       margin-bottom: 10px;
+    //     }
+    //   }
+    //   .cart-hover-effect {
+    //     display: none;
+    //   }
+    //   &:hover {
+    //     transition: all 0.3s linear;
+    //     .cart-hover-effect {
+    //       display: flex;
+    //       justify-content: center;
+    //       align-items: center;
+    //       width: 100%;
+    //       height: 100%;
+    //       position: absolute;
+    //       top: 0;
+    //       left: 0;
+    //       background-color: rgba(128, 128, 128, 0.457);
+    //     }
+    //   }
+    // }
+    .product-card__body {
+      margin-top: 30px;
+      @include desktop {
+        margin-top: 10px;
+      }
+      @include extra-large-desktop {
+        margin-top: 10px;
+      }
+    }
+    .btn-cart {
+      width: 72px;
+      height: 72px;
+      &:hover {
+        background-color: $primary;
+      }
+      img {
+        width: 26px;
+      }
+    }
+
+    .pagination-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 60px;
+      .prev-btn,
+      .next-btn,
+      .pagination-btn {
+        @include button-18(500);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $neutral1;
+        color: $secondary;
+        cursor: pointer;
+        &:hover,
+        &.active {
+          background-color: $secondary;
+          color: $white;
+          transition: all 0.2s linear;
+          path {
+            fill: $white;
+          }
+        }
+      }
+      .prev-btn {
+        svg {
+          rotate: 180deg;
+        }
+      }
+    }
+  }
+}

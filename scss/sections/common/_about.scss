@@ -1,0 +1,44 @@
+@use '../../abstract' as *;
+
+.about-section {
+  padding: 60px 0;
+  @include tablet {
+    padding: 80px 0;
+  }
+  @include desktop {
+    padding: 100px 0;
+  }
+  @include extra-large-desktop {
+    padding: 120px 0;
+  }
+}
+
+.about-image {
+  height: 300px;
+  @include tablet{
+    height: 100%;
+  }
+  @include extra-large-desktop{
+    max-width: 666px;
+    height: auto;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about-content {
+  @include extra-large-desktop{
+    max-width: 562px;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  .gallery-image {
+    width: 100%;
+    object-fit: cover;
+  }
+}

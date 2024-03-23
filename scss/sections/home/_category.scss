@@ -1,0 +1,26 @@
+@use '../../abstract' as *;
+
+.category-section {
+  margin-top: 100px;
+  gap: 32px;
+}
+.category-card-row {
+  --column-item: 1;
+  --column-gutter: 24px;
+  display: flex;
+  gap: var(--column-gutter);
+  flex-wrap: wrap;
+  justify-content: center;
+  & > * {
+    width: $column-width-formula;
+    @include mobile-large {
+      --column-item: 2;
+    }
+    @include tablet {
+      --column-item: 3;
+    }
+    @include desktop {
+      --column-item: 5;
+    }
+  }
+}

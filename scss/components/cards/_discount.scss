@@ -1,0 +1,106 @@
+@use "../../abstract" as *;
+
+.discount-card {
+  background-color: $neutral1;
+  color: $neutral8;
+  padding: 25px 20px;
+  position: relative;
+  @include mobile-large {
+    padding: 56px 40px;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background-color: $neutral2;
+    @include paragraph-18(700);
+    padding: 10px 18px;
+    @include tablet {
+      padding: 12px 28px;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    @include mobile-large {
+      gap: 0px;
+    }
+    @include tablet {
+      flex-direction: row;
+    }
+    .discount-card__content {
+      width: 100%;
+      margin-top: 50px;
+      @include tablet {
+        width: 45%;
+        margin-top: 80px;
+      }
+      @include large-desktop {
+        margin-top: 175px;
+      }
+      @include extra-large-desktop {
+        max-width: 260px;
+        margin-top: 160px;
+      }
+
+      .discount-card__title {
+        text-align: center;
+        @include heading-32(700);
+        color: $secondary;
+        margin-bottom: 10px;
+        @include tablet {
+          text-align: left;
+          margin-bottom: 24px;
+        }
+      }
+      p {
+        color: $neutral8;
+        text-align: center;
+        margin-bottom: 20px;
+        @include tablet {
+          text-align: left;
+          margin-bottom: 48px;
+        }
+      }
+      .discount-card__link {
+        cursor: pointer;
+        width: fit-content;
+        margin: 0 auto;
+        .view-product-btn {
+          @include paragraph-18();
+          color: $secondary;
+        }
+        @include tablet {
+          margin: 0;
+        }
+        .arrow-icon {
+          width: 10px;
+          margin-left: 4px;
+          @include tablet {
+            width: 12px;
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+  .discount-card__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include tablet {
+      width: 55%;
+      justify-content: end;
+    }
+    @include extra-large-desktop {
+      max-width: 395px;
+    }
+    img {
+      width: 90%;
+    }
+  }
+}

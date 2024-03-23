@@ -1,0 +1,17 @@
+@use '../../abstract' as *;
+.slick-dots {
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 16px !important;
+  @include extra-large-desktop {
+    margin-top: 40px !important;
+  }
+}
+.slick-dots li button:before {
+  font-size: 14px !important;
+  color: $neutral6 !important;
+}
+.blog-slide {
+  width: fit-content;
+  margin: 0 auto;
+}

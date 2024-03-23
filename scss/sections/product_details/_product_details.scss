@@ -1,0 +1,267 @@
+@use '../../abstract' as *;
+.product-details-main {
+  .inner-page-header {
+    p {
+      max-width: 80%;
+      @include tablet {
+        max-width: 549px;
+      }
+    }
+  }
+}
+.product-details-container {
+  margin-top: 80px;
+  margin-bottom: 130px;
+  .product-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 80px;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 60px;
+      margin-bottom: 90px;
+    }
+    @include large-desktop {
+      gap: 80px;
+      margin-bottom: 130px;
+    }
+    @include extra-large-desktop {
+      gap: 104px;
+    }
+    .product-images {
+      .large-image {
+        padding: 40px 23px;
+        border: 2px solid $neutral2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mobile-large {
+          padding: 70px 23px;
+        }
+        @include tablet {
+          padding: 100px 23px;
+        }
+        @include large-desktop {
+          padding: 141px 23px;
+        }
+        img {
+          width: 275px;
+          object-fit: cover;
+          @include mobile {
+            width: 332px;
+          }
+          @include mobile-large {
+            width: 432px;
+          }
+          @include tablet {
+            width: 532px;
+          }
+          @include extra-large-desktop {
+            width: 532px;
+          }
+        }
+      }
+      .other-images {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        justify-content: center;
+        @include desktop {
+          justify-content: start;
+          gap: 24px;
+        }
+        .other-image {
+          width: 80px;
+          height: 80px;
+          padding: 14px 9px;
+          border: 2px solid #d1d1d8;
+          border-radius: 4px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          @include tablet {
+            width: 104px;
+            height: 104px;
+            padding: 24px 9px;
+          }
+          &.active,
+          &:hover {
+            border-color: $secondary;
+            transition: all 0.2s linear;
+          }
+          img {
+            width: 100%;
+            height: 60px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+    .product-info-wrapper {
+      .product-slug-text {
+        @include paragraph-16();
+        color: $secondary;
+        margin-bottom: 32px;
+        span {
+          color: $neutral6;
+        }
+      }
+      .product-review {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 8px;
+        .review-number {
+          color: $secondary;
+          span {
+            color: $neutral6;
+          }
+        }
+        i {
+          color: $primary;
+        }
+      }
+      .title-price-description {
+        margin-bottom: 16px;
+        .product-title {
+          @include heading-32();
+          color: $secondary;
+          margin-bottom: 24px;
+        }
+        .product-price {
+          @include heading-48();
+          color: $secondary;
+          margin-bottom: 24px;
+        }
+        .product-description {
+          @include paragraph-18();
+        }
+      }
+      .product-features {
+        margin-bottom: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        @include tablet {
+          gap: 8px;
+          margin-bottom: 40px;
+        }
+        .feature {
+          @include paragraph-16(700);
+          color: $secondary;
+          span {
+            color: $secondary;
+            opacity: 0.8;
+          }
+        }
+      }
+      .product-colors {
+        display: flex;
+        align-items: start;
+        gap: 8px;
+        .color-wrapper {
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &.active {
+            background-color: rgba(214, 214, 214, 0.711);
+          }
+        }
+        .color {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          box-sizing: border-box;
+        }
+        .color-1 {
+          background-color: #318467;
+        }
+        .color-2 {
+          background-color: #58737d;
+        }
+        .color-3 {
+          background-color: #c1bdb3;
+        }
+        .color-4 {
+          background-color: #cba5a5;
+        }
+      }
+      .increment-decrement-block {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin: 22px 0;
+        @include tablet {
+          gap: 24px;
+          margin: 32px 0;
+        }
+        @include desktop {
+          align-items: center;
+          flex-direction: row;
+        }
+        .increment-decrement-btn {
+          min-width: 100%;
+          border: 2px solid $neutral2;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 40px;
+          @include desktop {
+            min-width: 164px;
+          }
+          i {
+            width: 20px;
+            color: $secondary;
+          }
+          .quantity {
+            @include paragraph-20(700);
+            color: $secondary;
+          }
+        }
+      }
+      .shipping-details {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 18px;
+        @include tablet {
+          align-items: center;
+          margin-bottom: 32px;
+          flex-direction: row;
+          gap: 12px;
+        }
+
+        .bullet-icon {
+          width: 8px;
+          height: 8px;
+          margin-right: 12px;
+          border-radius: 50%;
+          background-color: $neutral6;
+        }
+        span {
+          @include paragraph-16();
+        }
+      }
+      .payment-options {
+        .safe-checkout {
+          @include paragraph-18();
+          margin-bottom: 10px;
+        }
+        .payment-logo-block {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

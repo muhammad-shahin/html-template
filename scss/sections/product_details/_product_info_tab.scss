@@ -1,0 +1,171 @@
+@use '../../abstract' as *;
+
+.product-info-tabs {
+  .info-tabs-block {
+    margin-bottom: 40px;
+    .tabs-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      position: relative;
+      @include tablet {
+        gap: 40px;
+      }
+      @include desktop {
+        gap: 60px;
+      }
+      @include large-desktop {
+        gap: 80px;
+      }
+      .tab {
+        position: relative;
+        z-index: 200;
+        @include heading-24();
+        color: $secondary;
+        padding-bottom: 16px;
+        margin: 0;
+        border-bottom: 3px solid transparent;
+        cursor: pointer;
+        &.active {
+          border-bottom: 3px solid $primary;
+        }
+      }
+      .horizontal-row {
+        border-bottom: 3px solid $neutral1;
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+  .info-tab-container {
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    .info-tab-items {
+      display: flex;
+      transition: all 0.2s linear;
+      height: auto;
+      .info-tab-item {
+        min-width: 100%;
+        overflow: hidden;
+        .description-wrapper {
+          .description {
+            margin-bottom: 32px;
+          }
+          .feature-description {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+          }
+          p {
+            @include paragraph-18();
+            color: $secondary;
+            span {
+              @include paragraph-18(700);
+            }
+          }
+        }
+
+        .shipping-info-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          .shipping-info-content-block {
+            .shipping-info-content-title {
+              @include heading-20();
+              color: $secondary;
+              margin-bottom: 24px;
+            }
+            .shipping-info-content-descriptions {
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+              p {
+                @include paragraph-16();
+                color: $secondary;
+              }
+            }
+          }
+        }
+
+        .reviews-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+          .review-card {
+            padding: 16px;
+            border: 2px solid $neutral2;
+            @include mobile-large {
+              padding: 20px;
+            }
+            @include desktop {
+              padding: 32px;
+            }
+            .star-icons-wrapper {
+              margin-bottom: 8px;
+              i {
+                width: 20px;
+                height: 20px;
+                color: #ffd400;
+              }
+            }
+            .review-card__body {
+              .reviewer-name-and-date {
+                @include heading-20();
+                color: $secondary;
+                margin-bottom: 16px;
+                span {
+                  @include paragraph-18();
+                }
+              }
+              p {
+                @include paragraph-18();
+                color: $neutral8;
+              }
+            }
+          }
+        }
+        .comment-form-block {
+          padding: 18px;
+          margin-top: 40px;
+          background-color: $neutral1;
+          @include tablet {
+            padding: 32px;
+          }
+          .form-label {
+            @include heading-24();
+            color: $secondary;
+            margin-bottom: 32px;
+          }
+          .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .input-field {
+              width: 100%;
+              padding: 16px 20px;
+              @include paragraph-18(700);
+              color: $neutral4;
+              border: 2px solid $neutral2;
+              outline: none;
+            }
+            button {
+              width: fit-content;
+            }
+          }
+        }
+      }
+    }
+  }
+  // .info-tab-item:not(.active) {
+  //   display: none;
+  // }
+
+  // .info-tab-item.active {
+  //   display: block;
+  // }
+}

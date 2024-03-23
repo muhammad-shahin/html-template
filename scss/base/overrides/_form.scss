@@ -1,0 +1,13 @@
+@use '../../abstract' as *;
+.form-control{
+    border: 0;
+    background-color: #fff;
+    padding: 18px 20px;
+    &::placeholder{
+        color: rgba(var(--heading-color-rgb), .5);
+    }
+    &:focus{
+        box-shadow: none;
+    }
+}
+

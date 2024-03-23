@@ -1,0 +1,208 @@
+@use '../fonts' as *;
+@use '../mixins/breakpoints' as *;
+
+@mixin button-18($weight: 700) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  line-height: 1.12em;
+  font-size: 18px;
+  line-height: normal;
+  font-size: 14px;
+
+  @include desktop {
+    line-height: 0.9em;
+    font-size: 14px;
+  }
+  @include large-desktop {
+    line-height: 1.12em;
+    font-size: 16px;
+  }
+  @include extra-large-desktop {
+    font-size: 18px;
+  }
+}
+@mixin heading-20($weight: 700) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  line-height: 1.2em;
+  font-size: 14px;
+  @include mobile {
+    font-size: 16px;
+  }
+  @include tablet {
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 20px;
+  }
+}
+@mixin heading-24($weight: 700) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 14px;
+  @include mobile {
+    line-height: 0.8em;
+    font-size: 16px;
+  }
+  @include desktop {
+    line-height: 1em;
+    font-size: 18px;
+  }
+  @include large-desktop {
+    line-height: 1.2em;
+    font-size: 20px;
+  }
+  @include extra-large-desktop {
+    font-size: 24px;
+  }
+}
+@mixin heading-32($weight: 700) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  font-size: 20px;
+  line-height: normal;
+  @include mobile {
+    font-size: 22px;
+  }
+  @include desktop {
+    line-height: 1em;
+    font-size: 24px;
+  }
+  @include large-desktop {
+    line-height: 1.3em;
+    font-size: 28px;
+  }
+  @include extra-large-desktop {
+    font-size: 32px;
+  }
+}
+@mixin heading-40($weight: 700) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  font-size: 30px;
+  line-height: normal;
+  @include mobile {
+    line-height: 1em;
+    font-size: 32px;
+  }
+  @include desktop {
+    line-height: 1.1em;
+    font-size: 34px;
+  }
+  @include large-desktop {
+    line-height: 1.24em;
+    font-size: 36px;
+  }
+  @include extra-large-desktop {
+    font-size: 40px;
+  }
+}
+@mixin heading-48($weight: 700) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  line-height: 1em;
+  font-size: 38px;
+  @include mobile {
+    line-height: 1.1em;
+    font-size: 40px;
+  }
+  @include desktop {
+    line-height: 1.2em;
+    font-size: 42px;
+  }
+  @include large-desktop {
+    line-height: 1.32em;
+    font-size: 46px;
+  }
+  @include extra-large-desktop {
+    font-size: 48px;
+  }
+}
+@mixin heading-60($weight: 700) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  font-size: 32px;
+  line-height: 1em;
+  @include mobile-large {
+    line-height: 1.1em;
+    font-size: 40px;
+  }
+  @include desktop {
+    line-height: 1.2em;
+    font-size: 44px;
+  }
+  @include large-desktop {
+    line-height: 1.4em;
+    font-size: 54px;
+  }
+  @include extra-large-desktop {
+    font-size: 60px;
+  }
+}
+
+@mixin paragraph-16($weight: regular) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  line-height: 1.2em;
+  font-size: 12px;
+  @include desktop {
+    line-height: 1.4em;
+    font-size: 14px;
+  }
+  @include large-desktop {
+    line-height: 1.8em;
+    font-size: 16px;
+  }
+}
+@mixin paragraph-18($weight: regular) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  line-height: 1.8em;
+  font-size: 14px;
+  @include desktop {
+    font-size: 16px;
+  }
+  @include large-desktop {
+    font-size: 18px;
+  }
+}
+@mixin paragraph-20($weight: regular) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  line-height: 1.2em;
+  font-size: 14px;
+  @include desktop {
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+  @include large-desktop {
+    line-height: 1.6em;
+    font-size: 18px;
+  }
+  @include extra-large-desktop {
+    line-height: 1.8em;
+    font-size: 20px;
+  }
+}
+@mixin paragraph-24($weight: regular) {
+  font-weight: $weight;
+  letter-spacing: normal;
+  font-size: 16px;
+  @include mobile {
+    line-height: 1em;
+    font-size: 18px;
+  }
+  @include desktop {
+    line-height: 1.1em;
+    font-size: 20px;
+  }
+  @include large-desktop {
+    line-height: 1.2em;
+    font-size: 22px;
+  }
+  @include extra-large-desktop {
+    line-height: 1.5em;
+    font-size: 24px;
+  }
+}

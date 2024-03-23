@@ -1,0 +1,63 @@
+@use '../../abstract' as *;
+.timer-titles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  @include mobile-large {
+    gap: 24px;
+  }
+  @include tablet {
+    gap: 10px;
+  }
+  @include desktop {
+    gap: 14px;
+  }
+  @include extra-large-desktop {
+    gap: 24px;
+  }
+}
+.time-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.time-number {
+  @include heading-48(700);
+  color: $secondary;
+}
+.time-name {
+  @include paragraph-18(normal);
+  color: $neutral8;
+}
+.timer-colon {
+  @include heading-32(700);
+  font-family: 'Literata', serif;
+  color: $secondary;
+}
+.countdown {
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+
+  .emoji {
+    display: none;
+    padding: 1rem;
+  }
+
+  .emoji span {
+    font-size: 4rem;
+    padding: 0 0.5rem;
+  }
+}

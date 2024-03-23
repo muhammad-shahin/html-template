@@ -1,0 +1,14 @@
+@use "../../abstract" as *;
+
+.feature-section {
+  padding-top: 60px;
+  @include tablet {
+    padding-top: 80px;
+  }
+  @include desktop {
+    padding-top: 100px;
+  }
+  .features-block {
+    margin-top: 30px;
+  }
+}

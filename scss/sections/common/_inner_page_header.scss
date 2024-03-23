@@ -1,0 +1,25 @@
+@use '../../abstract' as *;
+.inner-page-header {
+  width: 100%;
+  min-height: 200px;
+  background-color: $secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  @include tablet {
+    min-height: 280px;
+    gap: 24px;
+  }
+  &__title {
+    @include heading-60(700);
+    text-align: center;
+    color: $white;
+  }
+  p {
+    @include paragraph-18(normal);
+    text-align: center;
+    color: $neutral2;
+  }
+}

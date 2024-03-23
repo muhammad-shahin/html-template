@@ -1,0 +1,68 @@
+@use '../../abstract' as *;
+
+.about-header {
+  .inner-page-header {
+    position: relative;
+    justify-content: start;
+    padding-top: 40px;
+    min-height: 320px;
+    margin-bottom: 160px;
+    @include mobile {
+      min-height: 320px;
+      margin-bottom: 200px;
+    }
+    @include mobile-large {
+      margin-bottom: 200px;
+      min-height: 350px;
+    }
+    @include tablet {
+      margin-bottom: 260px;
+      min-height: 380px;
+    }
+    @include desktop {
+      margin-bottom: 300px;
+      min-height: 430px;
+    }
+    @include large-desktop {
+      margin-bottom: 300px;
+      min-height: 480px;
+    }
+    p {
+      max-width: 90%;
+      @include tablet {
+        max-width: 549px;
+      }
+    }
+    .about-banner {
+      position: absolute;
+      bottom: -25%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include mobile {
+        bottom: -30%;
+      }
+      @include mobile-large {
+        bottom: -35%;
+      }
+      @include tablet {
+        bottom: -50%;
+      }
+      @include large-desktop {
+        width: 1075px;
+      }
+      img {
+        width: 90%;
+        @include mobile-large {
+          width: 80%;
+        }
+        @include large-desktop {
+          width: 1075px;
+        }
+      }
+    }
+  }
+}

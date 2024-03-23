@@ -1,0 +1,71 @@
+@use "../../abstract" as *;
+
+.newsletter-section {
+  margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 80px;
+  }
+  @include desktop {
+    margin-bottom: 100px;
+  }
+  @include extra-large-desktop {
+    margin-bottom: 120px;
+  }
+  .newsletter-wrapper {
+    background-color: $primary;
+    padding: 30px;
+    @include desktop {
+      padding: 40px 56px;
+    }
+    .newsletter-content {
+      margin-top: 30px;
+      @include tablet {
+        margin-top: 0px;
+      }
+      .newsletter-title {
+        @include heading-40();
+        padding-right: 0px;
+        @include extra-large-desktop {
+          padding-right: 40px;
+        }
+      }
+      p {
+        @include paragraph-18();
+        color: $neutral8;
+        margin-top: 16px;
+      }
+      .subscribe-form {
+        height: 52px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        margin-top: 30px;
+        @include tablet {
+          margin-top: 10px;
+          gap: 10px;
+        }
+        @include desktop {
+          margin-top: 30px;
+        }
+        .input-field {
+          width: 100%;
+          @include desktop {
+            width: 376px;
+          }
+          .input {
+            border: none;
+            height: 52px;
+          }
+        }
+        .btn-secondary {
+          padding: 12px 18px;
+        }
+      }
+    }
+    .newsletter-image {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

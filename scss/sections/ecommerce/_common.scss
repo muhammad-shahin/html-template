@@ -1,0 +1,43 @@
+@use "../../abstract" as *;
+
+.summery-box {
+  background-color: $neutral1;
+  border-radius: 2px;
+  padding: 15px;
+  color: $secondary;
+
+  @include tablet {
+    padding: 25px;
+  }
+  @include desktop {
+    padding: 32px;
+  }
+  .summery-title {
+    @include heading-24(700);
+    margin-bottom: 32px;
+  }
+  p {
+    display: flex;
+    justify-content: space-between;
+    @include paragraph-16();
+    margin-bottom: 16px;
+    .value {
+      text-align: right;
+      @include paragraph-16(700);
+    }
+  }
+  .divider {
+    width: 100%;
+    height: 2px;
+    background-color: $neutral2;
+    margin: 32px 0;
+  }
+  .input-field {
+    margin-bottom: 16px;
+  }
+  .checkout-btn {
+    button {
+      width: 100%;
+    }
+  }
+}

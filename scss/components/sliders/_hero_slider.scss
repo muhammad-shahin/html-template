@@ -1,0 +1,138 @@
+@use '../../abstract' as *;
+
+.swiper {
+  position: relative;
+  width: 100%;
+  @include tablet {
+    width: 100%;
+  }
+  @include desktop {
+    width: 500px;
+  }
+  @include large-desktop {
+    width: 587px;
+  }
+  @include extra-large-desktop {
+    width: 687px;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .slide-number {
+    margin-bottom: 32px;
+    color: $white;
+    text-align: left;
+    @include mobile-large {
+      margin-bottom: 20px;
+    }
+  }
+  .img-wrapper {
+    height: 290px;
+    @include tablet {
+      height: 390px;
+    }
+    @include desktop {
+      height: 490px;
+    }
+    @include large-desktop {
+      height: 580px;
+    }
+    @include extra-large-desktop {
+      height: 680px;
+      transition: height 1s ease;
+    }
+    .slider-image {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.swiper-slide-active {
+  width: 100% !important;
+  height: 380px !important;
+  @include mobile-large {
+    width: 60% !important;
+    height: auto !important;
+  }
+  .img-wrapper {
+    .slider-image {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.swiper-slide-next {
+  width: 0% !important;
+  @include mobile-large {
+    width: 40% !important;
+  }
+  .img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    .slider-image {
+      height: 284px;
+      object-fit: cover;
+      @include desktop {
+        height: 284px;
+      }
+    }
+  }
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// disable pagination by styles
+.swiper-pagination {
+  display: none;
+}
+
+// slider navigation button
+.prev-next-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 600;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  @include tablet {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+}
+.nav-btn {
+  width: 40px !important;
+  height: 40px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.swiper-btn-prev {
+  background-color: $neutral7;
+}
+.swiper-btn-next {
+  background-color: $neutral8;
+  .next-icon {
+    transform: rotate(180deg);
+  }
+}
+
+// disable the default icons
+.swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-next::after {
+  display: none;
+}

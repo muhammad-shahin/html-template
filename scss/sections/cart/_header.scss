@@ -1,0 +1,9 @@
+@use "../../abstract" as *;
+
+.page-header {
+  .page-header__description {
+    text-align: center;
+    color: $neutral2;
+    max-width: 549px;
+  }
+}

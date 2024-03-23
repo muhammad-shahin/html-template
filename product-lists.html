@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="./plugins/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/style.css"
+    />
+    <!-- aos css cdn -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Furniqe - Product Lists</title>
+  </head>
+  <body>
+    <main>
+      <!-- navbar start -->
+      <nav class="navbar-section">
+        <div class="container">
+          <div class="nav-content">
+            <a
+              class="navbar-brand"
+              href="/"
+            >
+              <img
+                src="/image/logo.png"
+                alt="Brand Logo"
+                class="brand-logo"
+            /></a>
+
+            <!-- nav items -->
+            <ul class="nav-items">
+              <li>
+                <a
+                  class="nav-item active"
+                  href="/"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="nav-item"
+                  href="/product-lists.html"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  class="nav-item"
+                  href="/about.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="nav-item"
+                  href="/blog.html"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  class="nav-item"
+                  href="/contact-us.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="sub-nav">
+                <a
+                  class="nav-item"
+                  href="/"
+                  >Pages</a
+                >
+                <img src="/image/icon/arrowIcon.svg" />
+                <ul class="sub-nav-items">
+                  <li>
+                    <a
+                      class="nav-item"
+                      href="/product-lists.html"
+                      >Products</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="nav-item"
+                      href="/product-details.html"
+                      >Product Details</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="nav-item"
+                      href="/cart.html"
+                      >Cart</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="nav-item"
+                      href="/checkout.html"
+                      >Checkout</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="nav-item"
+                      href="/blog.html"
+                      >Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="nav-item"
+                      href="/blog-details.html"
+                      >Blog Details</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="nav-item"
+                      href="/privacy-policy.html"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="nav-item"
+                      href="/terms-conditions.html"
+                      >Terms and Condition</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="nav-item"
+                      href="/faq.html"
+                      >FAQ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="nav-item"
+                      href="/not-found.html"
+                      >404</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="nav-icons">
+              <div class="icon-wrapper">
+                <a href="#">
+                  <img
+                    src="/image/icon/search-white.svg"
+                    alt="Search Icon"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="/image/icon/shopping-cart.svg"
+                    alt="Cart Icon"
+                  />
+                </a>
+              </div>
+              <div class="hamburger-icon">
+                <img
+                  src="/image/icon/hamburger-icon.svg"
+                  alt="Hamburger"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+      </nav>
+      <!-- navbar end -->
+
+      <div class="header-section">
+        <!-- inner page header -->
+        <div class="inner-page-header">
+          <h1
+            class="inner-page-header__title"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
+            Product Lists
+          </h1>
+          <p
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
+            Elevate Your Living Spaces with Timeless Furniture Designs, Where
+            Style Meets Comfort & Craftsman Redefines Elegance.
+          </p>
+        </div>
+      </div>
+
+      <!-- product lists with sidebar starts -->
+      <section class="container">
+        <div
+          class="product-lists-and-sidebar"
+          style="overflow-x: hidden"
+        >
+          <div
+            class="product-lists__sidebar"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="400"
+          >
+            <!-- product categories starts -->
+            <div
+              class="categories-block"
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+              data-aos-delay="400"
+            >
+              <h6
+                class="sidebar-label"
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="400"
+              >
+                Category
+              </h6>
+              <div class="categories-wrapper">
+                <div class="row gx-2 gx-md-3 gy-2 gy-md-4">
+                  <!-- category 1 -->
+                  <div class="col-4">
+                    <div class="category-card active">
+                      <img
+                        src="/image/chair.png"
+                        alt="Category"
+                        style="width: 30px"
+                      />
+                      <h6 class="category-title">Chair</h6>
+                    </div>
+                  </div>
+                  <!-- category 2 -->
+                  <div class="col-4">
+                    <div class="category-card">
+                      <img
+                        src="/image/sofa.png"
+                        alt="Category"
+                        style="width: 52px"
+                      />
+                      <h6 class="category-title">Sofa</h6>
+                    </div>
+                  </div>
+                  <!-- category 3 -->
+                  <div class="col-4">
+                    <div class="category-card">
+                      <img
+                        src="/image/cabinet.png"
+                        alt="Category"
+                        style="width: 42px"
+                      />
+                      <h6 class="category-title">Cabinet</h6>
+                    </div>
+                  </div>
+                  <!-- category 4 -->
+                  <div class="col-4">
+                    <div class="category-card">
+                      <img
+                        src="/image/divan.png"
+                        alt="Category"
+                        style="width: 60px"
+                      />
+                      <h6 class="category-title">Divan</h6>
+                    </div>
+                  </div>
+                  <!-- category 5 -->
+                  <div class="col-4">
+                    <div class="category-card">
+                      <img
+                        src="/image/wardrope.png"
+                        alt="Category"
+                        style="width: 42px"
+                      />
+                      <h6 class="category-title">Wardrobe</h6>
+                    </div>
+                  </div>
+                  <!-- category 6 -->
+                  <div class="col-4">
+                    <div class="category-card">
+                      <img
+                        src="/image/table.png"
+                        alt="Category"
+                        style="width: 42px; height: 42px; object-fit: contain"
+                      />
+                      <h6 class="category-title">Table</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- product categories end -->
+
+            <!-- price range start -->
+            <div
+              class="price-range-block"
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+              data-aos-delay="400"
+            >
+              <h6 class="sidebar-label">Price Range</h6>
+              <!-- multi range slider -->
+              <div class="multi-range-slider">
+                <div class="wrapper">
+                  <div class="values">
+                    <span> &dash; </span>
+                  </div>
+                  <div class="range-slider-container">
+                    <div class="slider-track"></div>
+                    <input
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="30"
+                      id="slider-1"
+                      oninput="slideOne()"
+                    />
+                    <input
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="70"
+                      id="slider-2"
+                      oninput="slideTwo()"
+                    />
+                  </div>
+                  <div class="from-to-block">
+                    <div class="from-wrapper">
+                      <span class="dollar-icon">$</span>
+                      <input
+                        name="price-from"
+                        id="range1"
+                        class="price-field"
+                        type="number"
+                        placeholder="0"
+                      />
+                      <span class="from-to-label">From</span>
+                    </div>
+                    <div class="to-wrapper">
+                      <span class="dollar-icon">$</span>
+                      <input
+                        name="price-from"
+                        id="range2"
+                        class="price-field"
+                        type="number"
+                        placeholder="0"
+                      />
+                      <span class="from-to-label">To</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- price range end -->
+
+            <!-- availability start -->
+            <div
+              class="availability-block"
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+              data-aos-delay="400"
+            >
+              <h6 class="sidebar-label">Availability</h6>
+              <div class="checkbox-items">
+                <div class="checkbox-wrapper">
+                  <input
+                    class="availability-checkbox"
+                    type="checkbox"
+                    name="all-products"
+                    id="all-products"
+                  />
+                  <label
+                    for="all-products"
+                    class="checkbox-label"
+                    >All Products</label
+                  >
+                </div>
+                <div class="checkbox-wrapper">
+                  <input
+                    class="availability-checkbox"
+                    type="checkbox"
+                    name="in-stock"
+                    id="in-stock"
+                  />
+                  <label
+                    for="in-stock"
+                    class="checkbox-label"
+                    >In Stock</label
+                  >
+                </div>
+                <div class="checkbox-wrapper">
+                  <input
+                    class="availability-checkbox"
+                    type="checkbox"
+                    name="out-of-stock"
+                    id="out-of-stock"
+                  />
+                  <label
+                    for="out-of-stock"
+                    class="checkbox-label"
+                    >Out Of Stock</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- availability end -->
+          </div>
+
+          <div
+            class="product-lists__block"
+            data-aos="fade-left"
+            data-aos-easing="linear"
+            data-aos-duration="400"
+          >
+            <div class="filter-bar">
+              <p class="showing-result-label">Showing: 20 of 1025 results</p>
+              <div class="sort-by-wrapper">
+                <p class="sort-by-label">Sort by:</p>
+                <select
+                  class="select-sort-by"
+                  name="sort-by"
+                  id="sort-by"
+                >
+                  <option value="Most Popular">Most Popular</option>
+                  <option value="Price Low to High">Price Low to High</option>
+                  <option value="Price High to Low">Price High to Low</option>
+                </select>
+              </div>
+            </div>
+            <hr class="horizontal-bar" />
+
+            <div class="products-container">
+              <div class="row g-3 gx-xxl-3">
+                <!-- product 1 -->
+                <div
+                  class="col-sm-6 col-xl-4"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <div class="product-card product-card-small">
+                    <div class="product-card__image">
+                      <img
+                        src="/image/grey-armchair-1.png"
+                        alt="Popular Product"
+                      />
+                    </div>
+                    <div class="product-card__body product-card__body-center">
+                      <h3 class="product-card__title">Grey Armchair</h3>
+                      <span class="product-card__price product-card__price-dark"
+                        >$175</span
+                      >
+                      <div
+                        class="product-card__cart-button product-card__cart-button-center"
+                      >
+                        <a class="btn btn-cart">
+                          <img
+                            src="/image/shopping-cart.png"
+                            alt="Shopping Cart"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- product 2 -->
+                <div
+                  class="col-sm-6 col-xl-4"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <div class="product-card product-card-small">
+                    <div class="product-card__image">
+                      <img
+                        src="/image/grey-armchair-2.png"
+                        alt="Popular Product"
+                      />
+                    </div>
+                    <div class="product-card__body product-card__body-center">
+                      <h3 class="product-card__title">Grey Armchair</h3>
+                      <span class="product-card__price product-card__price-dark"
+                        >$175</span
+                      >
+                      <div
+                        class="product-card__cart-button product-card__cart-button-center"
+                      >
+                        <a class="btn btn-cart">
+                          <img
+                            src="/image/shopping-cart.png"
+                            alt="Shopping Cart"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- product 3 -->
+                <div
+                  class="col-sm-6 col-xl-4"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <div class="product-card product-card-small">
+                    <div class="product-card__image">
+                      <img
+                        src="/image/grey-armchair-3.png"
+                        alt="Popular Product"
+                      />
+                    </div>
+                    <div class="product-card__body product-card__body-center">
+                      <h3 class="product-card__title">Grey Armchair</h3>
+                      <span class="product-card__price product-card__price-dark"
+                        >$175</span
+                      >
+                      <div
+                        class="product-card__cart-button product-card__cart-button-center"
+                      >
+                        <a class="btn btn-cart">
+                          <img
+                            src="/image/shopping-cart.png"
+                            alt="Shopping Cart"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- product 4 -->
+                <div
+                  class="col-sm-6 col-xl-4"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <div class="product-card product-card-small">
+                    <div class="product-card__image">
+                      <img
+                        src="/image/grey-armchair-4.png"
+                        alt="Popular Product"
+                      />
+                    </div>
+                    <div class="product-card__body product-card__body-center">
+                      <h3 class="product-card__title">Grey Armchair</h3>
+                      <span class="product-card__price product-card__price-dark"
+                        >$175</span
+                      >
+                      <div
+                        class="product-card__cart-button product-card__cart-button-center"
+                      >
+                        <a class="btn btn-cart">
+                          <img
+                            src="/image/shopping-cart.png"
+                            alt="Shopping Cart"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- product 5 -->
+                <div
+                  class="col-sm-6 col-xl-4"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <div class="product-card product-card-small">
+                    <div class="product-card__image">
+                      <img
+                        src="/image/grey-armchair-5.png"
+                        alt="Popular Product"
+                      />
+                    </div>
+                    <div class="product-card__body product-card__body-center">
+                      <h3 class="product-card__title">Grey Armchair</h3>
+                      <span class="product-card__price product-card__price-dark"
+                        >$175</span
+                      >
+                      <div
+                        class="product-card__cart-button product-card__cart-button-center"
+                      >
+                        <a class="btn btn-cart">
+                          <img
+                            src="/image/shopping-cart.png"
+                            alt="Shopping Cart"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- product 6 -->
+                <div
+                  class="col-sm-6 col-xl-4"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <div class="product-card product-card-small">
+                    <div class="product-card__image">
+                      <img
+                        src="/image/grey-armchair-6.png"
+                        alt="Popular Product"
+                      />
+                    </div>
+                    <div class="product-card__body product-card__body-center">
+                      <h3 class="product-card__title">Grey Armchair</h3>
+                      <span class="product-card__price product-card__price-dark"
+                        >$175</span
+                      >
+                      <div
+                        class="product-card__cart-button product-card__cart-button-center"
+                      >
+                        <a class="btn btn-cart">
+                          <img
+                            src="/image/shopping-cart.png"
+                            alt="Shopping Cart"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- product 7 -->
+                <div
+                  class="col-sm-6 col-xl-4"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <div class="product-card product-card-small">
+                    <div class="product-card__image">
+                      <img
+                        src="/image/grey-armchair-7.png"
+                        alt="Popular Product"
+                      />
+                    </div>
+                    <div class="product-card__body product-card__body-center">
+                      <h3 class="product-card__title">Grey Armchair</h3>
+                      <span class="product-card__price product-card__price-dark"
+                        >$175</span
+                      >
+                      <div
+                        class="product-card__cart-button product-card__cart-button-center"
+                      >
+                        <a class="btn btn-cart">
+                          <img
+                            src="/image/shopping-cart.png"
+                            alt="Shopping Cart"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- product 8 -->
+                <div
+                  class="col-sm-6 col-xl-4"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <div class="product-card product-card-small">
+                    <div class="product-card__image">
+                      <img
+                        src="/image/grey-armchair-8.png"
+                        alt="Popular Product"
+                      />
+                    </div>
+                    <div class="product-card__body product-card__body-center">
+                      <h3 class="product-card__title">Grey Armchair</h3>
+                      <span class="product-card__price product-card__price-dark"
+                        >$175</span
+                      >
+                      <div
+                        class="product-card__cart-button product-card__cart-button-center"
+                      >
+                        <a class="btn btn-cart">
+                          <img
+                            src="/image/shopping-cart.png"
+                            alt="Shopping Cart"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- product 9 -->
+                <div
+                  class="col-sm-6 col-xl-4"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <div class="product-card product-card-small">
+                    <div class="product-card__image">
+                      <img
+                        src="/image/grey-armchair-9.png"
+                        alt="Popular Product"
+                      />
+                    </div>
+                    <div class="product-card__body product-card__body-center">
+                      <h3 class="product-card__title">Grey Armchair</h3>
+                      <span class="product-card__price product-card__price-dark"
+                        >$175</span
+                      >
+                      <div
+                        class="product-card__cart-button product-card__cart-button-center"
+                      >
+                        <a class="btn btn-cart">
+                          <img
+                            src="/image/shopping-cart.png"
+                            alt="Shopping Cart"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="pagination-wrapper"
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="500"
+              >
+                <button class="prev-btn">
+                  <svg
+                    width="8"
+                    height="12"
+                    viewBox="0 0 8 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.83198 0L0.5 1.41L4.82659 6L0.5 10.59L1.83198 12L7.5 6L1.83198 0Z"
+                      fill="#213E40"
+                    />
+                  </svg>
+                </button>
+                <button class="pagination-btn">1</button>
+                <button class="pagination-btn active">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="next-btn">
+                  <svg
+                    width="8"
+                    height="12"
+                    viewBox="0 0 8 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.83198 0L0.5 1.41L4.82659 6L0.5 10.59L1.83198 12L7.5 6L1.83198 0Z"
+                      fill="#213E40"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- product lists with sidebar end -->
+
+      <!-- footer section start here -->
+      <footer class="footer-section">
+        <div class="container">
+          <div class="row gy-5 justify-content-between">
+            <div class="col-lg-4 col-xxl-3">
+              <div class="footer-description-block">
+                <a
+                  href="./index.html"
+                  class="footer-logo"
+                >
+                  <img
+                    src="./image/logo.png"
+                    alt=""
+                  />
+                </a>
+
+                <p>
+                  99 Roving St., Big City, PKU , Royal Ln. Mesa, New Jersey
+                  45463
+                </p>
+                <a
+                  href="mailto:helloworld@gmail.com"
+                  class="footer-link"
+                  >helloworld@gmail.com</a
+                >
+                <!-- <a href="#" class="btn btn-primary hvr-black">Buy Now</a> -->
+                <div class="payment-logo-block">
+                  <img
+                    src="./image/applePay.png"
+                    alt=""
+                  />
+                  <img
+                    src="./image/googlepay.png"
+                    alt=""
+                  />
+                  <img
+                    src="./image/mastercard.png"
+                    alt=""
+                  />
+                  <img
+                    src="./image/paypal.png"
+                    alt=""
+                  />
+                  <img
+                    src="./image/visa.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row gx-2 gx-sm-0 gy-4 gy-lg-5">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-4">
+                  <h3 class="footer-title">Quick links</h3>
+                  <ul class="footer-list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Blog details</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-4">
+                  <h3 class="footer-title">Category</h3>
+                  <ul class="footer-list">
+                    <li><a href="">Chair</a></li>
+                    <li><a href="">Sofa</a></li>
+                    <li><a href="">Table</a></li>
+                    <li><a href="">Bed</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-4">
+                  <h3 class="footer-title">Privacy</h3>
+                  <ul class="footer-list">
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Privacy & Policy</a></li>
+                    <li><a href="">Terms & Condition</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-6">
+                  <h3 class="footer-title">Working Hours</h3>
+                  <ul class="footer-list">
+                    <li>Monday-Saturday</li>
+                    <li>08:30 am-19:00 pm</li>
+                    <li>Sunday Closed</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-block">
+          <p>Copyright @2024 by <a href="https://sailr.agency">Sailr</a></p>
+        </div>
+      </footer>
+      <!-- footer section end here -->
+    </main>
+    <!-- bootstrap js -->
+    <script src="/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- multi range slider -->
+    <script src="/js/multiRangeSlider.js"></script>
+    <!-- aos js cdn -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

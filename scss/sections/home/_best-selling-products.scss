@@ -1,0 +1,21 @@
+@use '../../abstract' as *;
+
+.best-selling-section {
+  padding: 60px 0;
+  background-color: $white;
+  @include tablet {
+    padding: 80px 0;
+  }
+  @include desktop {
+    padding: 100px 0;
+  }
+  @include extra-large-desktop {
+    padding: 130px 0;
+  }
+  .product-card:hover .btn-cart {
+    background-color: $secondary;
+  }
+  .product-card:hover .btn-cart img {
+    filter: brightness(200);
+  }
+}

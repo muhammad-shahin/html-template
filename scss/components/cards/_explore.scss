@@ -1,0 +1,35 @@
+@use '../../abstract' as *;
+
+.explore-card {
+  background-color: $white;
+  border: 1px solid $neutral4;
+  padding: 35px 30px;
+  @include tablet {
+    padding: 60px 52px;
+  }
+  @include desktop {
+    padding: 73px 62px;
+  }
+  @include extra-large-desktop {
+    padding: 88px 62px;
+  }
+  &__title {
+    @include heading-32(700);
+    color: $secondary;
+    margin-bottom: 15px;
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+  p {
+    @include paragraph-18();
+    color: $neutral8;
+    margin-bottom: 20px;
+    @include tablet {
+      margin-bottom: 35px;
+    }
+    @include desktop {
+      margin-bottom: 48px;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@use '../../abstract' as *;
+.blog-banner-section {
+  .inner-page-header {
+    margin-bottom: 80px;
+    p {
+      max-width: 549px;
+    }
+  }
+}
+.blog-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@mixin column-gap($col-gap) {
+  display: inline-flex;
+  align-items: center;
+  column-gap: $col-gap;
+}
+@mixin object-image() {
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-card {
+  @include paragraph-16;
+
+  &__image {
+    margin-bottom: 24px;
+    display: block;
+
+    img {
+      width: 100%;
+      height: 298px;
+    }
+  }
+
+  &__date {
+    color: $neutral8;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    @include heading-20;
+    color: $secondary;
+    margin-bottom: 16px;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+
+  &__link {
+    color: $secondary;
+    @include button-18;
+    @include column-gap(6px);
+    img {
+      width: 12px;
+    }
+  }
+}
+
+.blog-card--media {
+  --body-padding: 30px;
+  background-color: $neutral1;
+  @include paragraph-18;
+  @include tablet {
+    display: flex;
+    & > div {
+      width: 50%;
+    }
+  }
+  @include large-desktop {
+    --body-padding: 60px;
+  }
+
+  .blog-card__image {
+    margin-bottom: 0;
+    img {
+      height: 100%;
+      @include object-image;
+    }
+  }
+  .blog-card__date {
+    margin-bottom: 8px;
+    @include paragraph-18;
+  }
+
+  .blog-card__title {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 57.6px */
+    margin-bottom: 20px;
+    @include mobile-large {
+      font-size: 28px;
+    }
+    @include desktop {
+      font-size: 48px;
+    }
+  }
+
+  .blog-card__body {
+    padding: var(--body-padding) 30px var(--body-padding) var(--body-padding);
+    p:last-of-type {
+      @include desktop {
+        margin-bottom: 76px;
+      }
+    }
+  }
+}

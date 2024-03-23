@@ -1,0 +1,176 @@
+@use '../../abstract' as *;
+
+.navbar-section {
+  width: 100%;
+  background-color: $secondary;
+  .divider {
+    border-bottom: 1px solid $neutral7;
+  }
+  .nav-content {
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @include tablet {
+      padding: 32px 0;
+    }
+  }
+
+  .brand-logo {
+    width: 120px;
+    @include tablet {
+      width: 136px;
+    }
+    @include desktop {
+      width: 156px;
+    }
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    position: fixed;
+    top: 82px;
+    right: -100%;
+    width: 70%;
+    min-height: 100vh;
+    padding-top: 40px;
+    background-color: $primary;
+    z-index: 200;
+    transition: all 0.3s linear;
+    @include desktop {
+      background-color: $secondary;
+      padding-top: 0px;
+      flex-direction: row;
+      justify-content: center;
+      width: auto;
+      min-height: auto;
+      position: static;
+    }
+
+    .nav-item {
+      @include paragraph-20();
+      font-size: 20px;
+      color: $secondary;
+
+      transition: all 0.2s linear;
+      @include desktop {
+        color: $white;
+      }
+
+      &:hover,
+      &.active {
+        color: $white;
+        transition: all 0.2s linear;
+        @include desktop {
+          color: $primary;
+        }
+      }
+    }
+    li {
+      cursor: pointer;
+      &:hover {
+        .sub-nav-items {
+          display: flex;
+          opacity: 1;
+          transition: all 0.3s linear;
+          animation: fadeUp 0.3s ease-in-out;
+        }
+        img {
+          rotate: 180deg;
+          transition: rotate 0.3s linear;
+        }
+      }
+      &:not(:hover) {
+        .sub-nav-items {
+          display: flex;
+          animation: fadeDown 0.3s ease-in-out;
+        }
+      }
+      img {
+        width: 20px;
+        margin-left: 8px;
+        transition: rotate 0.3s linear;
+      }
+    }
+  }
+  .sub-nav {
+    position: relative;
+  }
+  .sub-nav-items {
+    position: absolute;
+    top: 35px;
+    left: -25%;
+    background-color: $secondary;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    @include desktop {
+      background-color: $primary;
+      width: 230px;
+    }
+
+    .nav-item {
+      color: $white;
+      padding: 0;
+      @include desktop {
+        color: $secondary;
+      }
+      &:hover,
+      &.active {
+        color: $white;
+      }
+    }
+  }
+
+  .nav-icons,
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    @include tablet {
+      gap: 32px;
+    }
+  }
+  .hamburger-icon {
+    img {
+      cursor: pointer;
+      width: 24px;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

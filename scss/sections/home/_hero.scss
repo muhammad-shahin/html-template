@@ -1,0 +1,165 @@
+@use '../../abstract' as *;
+
+.hero-section {
+  background-color: $secondary;
+  padding: 80px 0;
+  @include mobile-large {
+    padding: 80px 0;
+  }
+}
+.hero-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 50px;
+  @include desktop {
+    flex-direction: row;
+  }
+}
+.hero-left-content {
+  max-width: 325px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include mobile-large {
+    max-width: 455px;
+  }
+}
+.hero-mini-product-card {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  @include large-desktop {
+    margin-bottom: 0px;
+    margin-top: 40px;
+  }
+  .hero-mini-product-card-body {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+  }
+  @include extra-large-desktop {
+    margin-top: 50px;
+  }
+  .mini-card-img-wrapper {
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.181);
+    @include desktop {
+      padding: 6px;
+    }
+    @include large-desktop {
+      padding: 8px;
+    }
+    @include extra-large-desktop {
+      padding: 12px;
+    }
+    img {
+      object-fit: cover;
+      width: 78px;
+      height: 78px;
+    }
+  }
+  .min-card-title {
+    color: $white;
+  }
+  .min-card-price {
+    color: $primary;
+    margin-top: 8px;
+  }
+}
+.hero-content-wrapper {
+  max-width: 452px;
+  .hero-title {
+    @include heading-60(700);
+    margin-bottom: 24px;
+    color: $white;
+  }
+  .hero-description-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+    @include desktop {
+      margin-bottom: 24px;
+    }
+    @include large-desktop {
+      margin-bottom: 32px;
+    }
+    @include extra-large-desktop {
+      margin-bottom: 48px;
+    }
+    .hero-description {
+      @include paragraph-18(normal);
+      color: $neutral2;
+      padding-left: 10px;
+      border-left: 2px solid $primary;
+      @include mobile-large {
+        padding-left: 16px;
+        border-left: 4px solid $primary;
+      }
+    }
+  }
+}
+.hero-right-slider {
+  position: relative;
+}
+.social-links-wrapper {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+  margin: 0 auto;
+  top: 24px;
+  @include desktop {
+    position: absolute;
+    z-index: 600;
+    rotate: 90deg;
+    gap: 35px;
+    top: 50%;
+    right: -160px;
+    transform: translateY(-50%);
+  }
+  @include large-desktop {
+    right: -170px;
+  }
+  @include extra-large-desktop {
+    gap: 56px;
+    right: -250px;
+  }
+  .social-link {
+    color: $white;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// fade in & out animation for product card
+.hero-mini-product-card {
+  display: none;
+  animation: fadeOut 2s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  display: block;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
